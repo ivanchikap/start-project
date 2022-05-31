@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-    /*
     $(window).stellar({
         responsive: true,
         parallaxBackgrounds: true,
@@ -10,41 +9,37 @@ $(document).ready(function(){
         hideDistantElements: false,
         scrollProperty: 'scroll'
     });
-    */
     //Прокрутка бекграунда разом зі скролом. Необхідно stellar.min.js і наче jquery-migrate.min.js
 
 
-    /*
-    if (document.getElementById('nav__menu-btn')) {
-        let navMenuBtn = document.getElementById('nav__menu-btn');
+
+    if (document.getElementById('btnMenu')) {
+        let navMenuBtn = document.getElementById('btnMenu');
         let closeMenu = document.getElementById('closeMenu');
-        let header = document.getElementById('header');
+        let menu = document.getElementById('menu');
 
         navMenuBtn.addEventListener("click", function() {
             let menu = document.getElementById('menu');
             setTimeout(function () {
-                menu.classList.toggle('nav__mobile--active');
+                menu.classList.toggle('mobile-menu--active');
             }, 100)
         });
-        header.addEventListener("click", function(e) {
+        menu.addEventListener("click", function(e) {
             let target = e.target;
-            let menu = document.getElementById('menu');
-            let overlay = document.getElementById('overlay');
-            let navItemsMobile = document.querySelectorAll('.nav__item--mobile');
 
-            if (target === closeMenu || target === overlay || target.classList.contains('nav__item--mobile')) {
+            if (target === closeMenu || target === menu || target.classList.contains('nav__item--mobile')) {
+                //коли тиснема на переход по якорю також прибирати клас --active
                 setTimeout(function () {
-                    menu.classList.toggle('nav__mobile--active');
+                    menu.classList.toggle('mobile-menu--active');
                 }, 100);
             }
         });
     }
-    */
+
     //mobile menu
 
-    /*
-    var contentWayPoint = function() {
-        var i = 0;
+    let contentWayPoint = function() {
+        let i = 0;
         $('.ftco-animate').waypoint( function( direction ) {
 
             if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
@@ -55,9 +50,9 @@ $(document).ready(function(){
                 setTimeout(function(){
 
                     $('body .ftco-animate.item-animate').each(function(k){
-                        var el = $(this);
+                        let el = $(this);
                         setTimeout( function () {
-                            var effect = el.data('animate-effect');
+                            let effect = el.data('animate-effect');
                             if ( effect === 'fadeIn') {
                                 el.addClass('fadeIn ftco-animated');
                             } else if ( effect === 'fadeInLeft') {
@@ -78,7 +73,6 @@ $(document).ready(function(){
         } , { offset: '95%' } );
     };
     contentWayPoint();
-    */
     //анімація при прокрутці - працює разом з
     // jquery-waypoints.min.js, animate.css та в base .ftco-animate { opacity: 0, visibility: hidden;}
     //

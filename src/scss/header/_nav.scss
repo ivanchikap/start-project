@@ -1,0 +1,24 @@
+.nav {
+  $root: &;
+
+  &__menu-btn {
+    display: none;
+    font-size: 24px;
+    line-height: 46px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
+
+
+
+  &__mob-menu {
+
+  }
+
+
+}

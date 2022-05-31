@@ -5,7 +5,17 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.hidden-title {
+  visibility: hidden;
+  height: 0;
+}
+
 
 .default-section {
   padding-top: 100px;
@@ -45,12 +55,6 @@ body {
   visibility: hidden;
 }
 
-.pos-relative {
-  position: relative;
-}
-.pos-absolute {
-  position: absolute;
-}
 .d-none {
   display: none;
 }
@@ -66,6 +70,7 @@ body {
 .text-center {
   text-align: center !important;
 }
+
 @include tablet {
   .text-md-center {
     text-align: center !important;
@@ -80,5 +85,20 @@ body {
 @include tablet {
   .text-md-left {
     text-align: left;
+  }
+}
+
+
+.btn-menu {
+  display: none;
+  font-size: 24px;
+  line-height: 46px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+  z-index: 11;
+
+  @include tablet {
+    display: inline-block;
   }
 }

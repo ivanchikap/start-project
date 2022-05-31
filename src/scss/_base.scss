@@ -1,0 +1,84 @@
+body {
+  //font-family: $montserrat;
+  //color: rgba($black, 0.8);
+  //background-color: $bg-gray;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.default-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #dee2e6;
+
+  @include laptop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include tablet {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @include mobile-large {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.d-block {
+  display: block;
+}
+
+@include mobile-large {
+  .d-sm-block {
+    display: block;
+  }
+}
+
+.ftco-animate {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pos-relative {
+  position: relative;
+}
+.pos-absolute {
+  position: absolute;
+}
+.d-none {
+  display: none;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+@include tablet {
+  .text-md-center {
+    text-align: center !important;
+  }
+}
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  text-align: left !important;
+}
+@include tablet {
+  .text-md-left {
+    text-align: left;
+  }
+}

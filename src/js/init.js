@@ -1,5 +1,26 @@
 $(document).ready(function(){
 
+    //SVG Fallback
+    if(!Modernizr.svg) {
+        $("img[src*='svg']").attr("src", function() {
+            return $(this).attr("src").replace(".svg", ".png");
+        });
+    };
+    //Замінюєм svg на png якщо не підтримується
+
+    //Chrome Smooth Scroll
+    try {
+        $.browserSelector();
+        if($("html").hasClass("chrome")) {
+            $.smoothScroll();
+        }
+    } catch(err) {
+
+    };
+
+    $("img, a").on("dragstart", function(event) { event.preventDefault(); });
+    //Зображення і ссилки не переміщуютсья
+
     $(window).stellar({
         responsive: true,
         parallaxBackgrounds: true,
